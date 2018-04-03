@@ -1,0 +1,26 @@
+{
+  "name": "edgejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node generator.js && gulp"
+  },
+  "author": "Nenad Sparic",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "edge.js": "^1.1.4",
+    "fs-path": "0.0.23",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-htmlmin": "^4.0.0"
+  },
+  "__enviroment": {
+    "__default_language": "sr",
+    "__beta_destination": "beta",
+    "__prod_destination": "prod"
+  }
+}
