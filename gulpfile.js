@@ -1,9 +1,13 @@
-var gulp = require("gulp");
-var htmlmin = require("gulp-htmlmin");
-var refresh = require("gulp-refresh");
+const gulp = require("gulp");
+const htmlmin = require("gulp-htmlmin");
+const run = require('gulp-run-command').default;
 
 const config = require("./package.json");
 
+// generate site
+gulp.task("generate", run('node generator.js'));
+
+// minify task
 gulp.task("minify", function() {
   return gulp
     .src(`${config.__enviroment.__beta_destination}/**/*.html`)
@@ -11,21 +15,10 @@ gulp.task("minify", function() {
     .pipe(gulp.dest(`${config.__enviroment.__prod_destination}`));
 });
 
-gulp.task("assets", function() {
-  return gulp
-    .src(`view/assets/**/*`)
-    .pipe(gulp.dest(`${config.__enviroment.__beta_destination}/assets`));
-});
-
-gulp.task("assets_to_prod", function() {
-  return gulp
-    .src(`${config.__enviroment.__beta_destination}/assets/**/*`)
-    .pipe(gulp.dest(`${config.__enviroment.__prod_destination}/assets`));
-});
-
+// start watch task
 gulp.task("watch", function() {
-  refresh.listen();
-  gulp.watch("view/**/*", ["assets"]);
+  gulp.watch(["view/**/*", 'data.js'], ["generate"]);
 });
 
-gulp.task("default", ["minify", "assets_to_prod"]);
+// default gulp task
+gulp.task("default", ["generate", "minify"]);

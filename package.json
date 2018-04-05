@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generator": "node generator.js && gulp assets",
     "build": "gulp",
-    "watch": "gulp watch"
+    "dev": "gulp watch"
   },
   "author": "Nenad Sparic",
   "license": "ISC",
@@ -19,7 +18,8 @@
     "gulp-cli": "^2.0.1",
     "gulp-html-minifier": "^0.1.8",
     "gulp-htmlmin": "^4.0.0",
-    "gulp-refresh": "^1.1.0"
+    "gulp-refresh": "^1.1.0",
+    "gulp-run-command": "0.0.9"
   },
   "__enviroment": {
     "__default_language": "sr",
