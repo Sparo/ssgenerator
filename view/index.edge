@@ -82,7 +82,7 @@
                                 <ul class="list-unstyled list-inline">
                                     <li>
                                         <span>
-                                            <a href="{{ config.translate_url }}">{{ config.translate_label }}</a>
+                                            <a style="color: white" href="{{ config.translate_url }}">{{ config.translate_label }}</a>
                                         </span>
                                     </li>
                                 </ul>
@@ -161,7 +161,7 @@
                                 <span>{{ data.schedule.title }}</span>
 
                                 <small>
-                                    <strong>{{data.schedule.subtitle1}}</strong>
+                                    <strong style="color: #aaa">{{data.schedule.subtitle1}}</strong>
                                 </small>
 
                                 <small>
@@ -181,7 +181,7 @@
                                 </small>
 
                                 <small>
-                                    <strong>{{data.schedule.subtitle2}}</strong>
+                                    <strong style="color: #aaa">{{data.schedule.subtitle2}}</strong>
                                 </small>
 
                                 <small>
@@ -241,7 +241,7 @@
                                 <span>{{ data.register.callToAction }}
                                     <a target="_blank" href="{{ data.register.callToActionUrl }}">
                                         <strong>
-                                            <u>LINK</u>
+                                            <u>{{ data.register.callToActionLabel }}</u>
                                         </strong>
                                     </a>
                                 </span>

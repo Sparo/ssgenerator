@@ -27,12 +27,12 @@ module.exports = {
         },
         schedule: {
           title: "Aikido seminar 20. 10. 2018.",
-          subtitle1: "Prepodne:",
+          subtitle1: "Prepodnevni trening:",
           event1: "11 – 12 Velibor Vesović",
           event2: "12 – 13 Michele Quaranta",
-          event3: "13 – 14 Velibor Vesović i Michele Quaranta",
-          event3_smalltext: '(trening za decu do 12 godina - deca su oslobodjenja seminarskih taksi)',
-          subtitle2: "Popodne:",
+          event3: "13 – 14 Velibor Vesović i Michele Quaranta - trening za decu",
+          event3_smalltext: '(deca do 12 godina su oslobodjena seminarskih taksi)',
+          subtitle2: "Popodnevni trening:",
           event4: "17 – 18 Michele Quaranta",
           event5: "18 – 19 Velibor Vesović",
           event6: "19:15 AIKIDO PRZENTACIJA",
@@ -61,8 +61,9 @@ module.exports = {
           }
         ],
         register: {
-          callToAction: "Mozete se registrovati na",
+          callToAction: "Mozete se registrovati",
           callToActionUrl: "https://www.cognitoforms.com/AgencijaZaInformati%C4%8DkuPodr%C5%A1ku/SeminarPovodom50GodinaVe%C5%BEbanjaAikidaUSrbiji",
+            callToActionLabel: "ovde",
           taks1: "Seminarska taksa - 15 Eura",
           taks2: "Koktel taksa - 15 Eura"
         }
@@ -100,12 +101,12 @@ module.exports = {
         },
         schedule: {
           title: "Aikido seminar 20. 10. 2018.",
-          subtitle1: "Before noon:",
+          subtitle1: "Morning session:",
           event1: "11 – 12 Velibor Vesović",
           event2: "12 – 13 Michele Quaranta",
-          event3: "13 – 14 Velibor Vesović i Michele Quaranta",
-          event3_smalltext: '(for kids before 12 - kids are free of seminar taxes)',
-          subtitle2: "After noon:",
+          event3: "13 – 14 Velibor Vesović i Michele Quaranta - session for kids",
+          event3_smalltext: '(up to 12 years old - admission free)',
+          subtitle2: "Afternoon session:",
           event4: "17 – 18 Michele Quaranta",
           event5: "18 – 19 Velibor Vesović",
           event6: "19:15 AIKIDO PRESENTATION",
@@ -130,8 +131,9 @@ module.exports = {
           }
         ],
         register: {
-          callToAction: "You can register on",
+          callToAction: "Register",
           callToActionUrl: "https://www.cognitoforms.com/AgencijaZaInformati%C4%8DkuPodr%C5%A1ku/SeminarPovodom50GodinaVe%C5%BEbanjaAikidaUSrbiji",
+            callToActionLabel: "here",
           taks1: "Seminar - 15 EUR",
           taks2: "Koktel - 15 EUR"
         }
