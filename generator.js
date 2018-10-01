@@ -7,6 +7,8 @@ const config = require("./package");
 
 edge.registerViews(path.join(__dirname, './view'));
 
+const ENVIROMENT = process.env.NODE_ENV || config.__enviroment.__beta_destination;
+
 Object.keys(data).map((page) => {
     // `Object.keys` je metoda koja iz objekta izvuce niz njegovih kljuceva
     // npr:
@@ -36,12 +38,12 @@ Object.keys(data).map((page) => {
         // create page from data source
         let page_compile = edge.render(page, data[page][language]);
         // create path to files
-        let page_path = `./${config.__enviroment.__beta_destination}/${language}/${page}.html`;
+        let page_path = `./${ENVIROMENT}/${language}/${page}.html`;
 
         // check if language in iteration is default language
         if (language === config.__enviroment.__default_language) {
             // if so, make this files default
-            page_path = `./${config.__enviroment.__beta_destination}/${page}.html`;
+            page_path = `./${ENVIROMENT}/${page}.html`;
         }
 
         // write files into proper directories

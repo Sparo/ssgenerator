@@ -60,7 +60,7 @@
         </ul>
     </div>
 
-    <div class="navbar-block navbar-right toggleButton">
+    <div class="navbar-block navbar-right toggleButton" style="right: 0; top: 0;">
         <div class="navbar-block-inner">
             <div id="nav-icon" class="nav-icon--right">
                 <span></span>
@@ -74,20 +74,15 @@
     <div id="ct-js-wrapper" class="ct-pageWrapper">
 
         <header class="ct-mainHeader">
-            <div class="ct-topBar ct-topBar--type1" style="display: none">
+            <div class="ct-topBar ct-topBar--type1">
                 <div class="navbar navbar-default">
                     <div class="container">
                         <div class="navbar-block navbar-left">
                             <div class="navbar-block-inner">
                                 <ul class="list-unstyled list-inline">
                                     <li>
-                                        <span>Call Us Now
-                                            <a href="tel:1234567890">123 456 789 - 0</a>
-                                        </span>
-                                    </li>
-                                    <li>
                                         <span>
-                                            <a href="mailto:info@dojo.com">info@dojo.com</a>
+                                            <a href="{{ config.translate_url }}">{{ config.translate_label }}</a>
                                         </span>
                                     </li>
                                 </ul>
@@ -96,35 +91,11 @@
 
                         <div class="navbar-block navbar-right">
                             <div class="navbar-block-inner">
-                                <ul class="socialicons">
+                                <ul class="list-unstyled list-inline">
                                     <li>
-                                        <a href="https://www.facebook.com/createITpl" data-toggle="tooltip" data-placement="bottom" title data-original-title="Facebook">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="https://twitter.com/createitpl" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Twitter">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" data-toggle="tooltip" data-placement="bottom" title data-original-title="LinkedIn">
-                                            <i class="fa fa-linkedin"></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" data-toggle="tooltip" data-placement="bottom" title data-original-title="RSS">
-                                            <i class="fa fa-rss"></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" data-toggle="tooltip" data-placement="bottom" title data-original-title="Vimeo">
-                                            <i class="fa fa-vimeo-square"></i>
-                                        </a>
+                                        <span class="text-primary" style="color: #337ab7">
+                                            {{ data.header.organisation }}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -164,7 +135,8 @@
         </header>
 
         <main>
-            <section id="home" class="section" data-background="http://aikidocamp.com/wp-content/uploads/2014/10/home_hero.jpg" data-height="865" data-background-mobile="{{ config.assets_root }}assets/images/content/stopYellingBG.jpg">
+            <section id="home" class="section" data-background="http://res.cloudinary.com/sparo/image/upload/b_rgb:ffffff,c_pad,h_900,pg_1,w_1920/v1522940382/Aikido/AIKIDO50G_LOGO_t6klfg.jpg"
+                data-height="865" data-background-mobile="http://res.cloudinary.com/sparo/image/upload/c_fit,h_1080,w_1920/v1522940382/Aikido/AIKIDO50G_LOGO_t6klfg.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-6">
@@ -172,12 +144,7 @@
                                 data-arrows="true" data-dots="true" data-items="1" data-height="865">
                                 <div class="item ct-u-colorWhite text-uppercase text-center ct-fw-700">
                                     <div class="item-inner">
-                                        <span class="h1">{{ data.home.h1_1 }}</span>
-                                        <br />
-                                        <span class="h2">{{ data.home.h2_1 }}</span>
-                                        <span class="h2">{{ data.home.h2_2 }}</span>
-                                        <br />
-                                        <span class="h1">{{ data.home.h1_2 }}</span>
+                                        <span>&nbsp;</span>
                                     </div>
                                 </div>
                             </section>
@@ -188,17 +155,50 @@
 
             <section id="schedule" class="section ct-u-paddingTop100">
                 <div class="container">
-                   <div class="ct-headerBox ct-headerBox--type2">
+                    <div class="ct-headerBox ct-headerBox--type2">
                         <div class="ct-headerBox-body">
                             <h3>
                                 <span>{{ data.schedule.title }}</span>
+
+                                <small>
+                                    <strong>{{data.schedule.subtitle1}}</strong>
+                                </small>
+
                                 <small>
                                     <span>{{ data.schedule.event1 }}</span>
                                 </small>
                                 <small>
                                     <span>{{ data.schedule.event2 }}</span>
                                 </small>
-                            </h3>
+                                <small>
+                                    <span>{{ data.schedule.event3 }}</span>
+
+                                    <small style="text-transform: lowercase; color: brown">
+                                        <i>
+                                            {{ data.schedule.event3_smalltext }}
+                                        </i>
+                                    </small>
+                                </small>
+
+                                <small>
+                                    <strong>{{data.schedule.subtitle2}}</strong>
+                                </small>
+
+                                <small>
+                                    <span>{{ data.schedule.event4 }}</span>
+                                </small>
+                                <small>
+                                    <span>{{ data.schedule.event5 }}</span>
+                                </small>
+                                <br>
+                                <small>
+                                    <span style="color: #bbb">
+                                        <strong>
+                                            {{ data.schedule.event6 }}
+                                        </strong>
+                                    </span>
+                                </small>
+                           </h3>
                         </div>
                     </div>
                 </div>
@@ -235,15 +235,18 @@
 
             <section id="register" class="section ct-u-paddingTop100">
                 <div class="container">
-                   <div class="ct-headerBox ct-headerBox--type2">
+                    <div class="ct-headerBox ct-headerBox--type2">
                         <div class="ct-headerBox-body">
                             <h3>
-                                <span>{{ data.register.callToAction }} <a href="#">Link</a> </span>
+                                <span>{{ data.register.callToAction }}
+                                    <a target="_blank" href="{{ data.register.callToActionUrl }}">
+                                        <strong>
+                                            <u>LINK</u>
+                                        </strong>
+                                    </a>
+                                </span>
                                 <small>
                                     <span>{{ data.register.taks1 }}</span>
-                                </small>
-                                <small>
-                                    <span>{{ data.register.taks2 }}</span>
                                 </small>
                             </h3>
                         </div>
@@ -252,6 +255,21 @@
             </section>
 
             <section id="map" class="section ct-u-paddingTop100">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center">
+                            <address style="color: #aaa">
+                                <strong>HALA SPORTOVA</strong>
+                                <br> Pariske komune 20
+                                <br> Novi Beograd
+                                <br>
+                                <abbr title="Phone">P:</abbr> (011) 2601658
+                                <br>
+                                <a target="_blank" href="http://www.halasportova.rs">www.halasportova.rs</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
                 <div class="ct-map-container">
                     <div class="ct-map" data-height="355"></div>
                 </div>

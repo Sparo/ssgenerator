@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "dev": "gulp watch"
+    "build": "NODE_ENV=prod gulp",
+    "dev": "NODE_ENV=beta gulp watch"
   },
   "author": "Nenad Sparic",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "st": "^1.2.2"
+  },
   "devDependencies": {
     "edge.js": "^1.1.4",
     "fs-path": "0.0.23",
@@ -18,12 +20,14 @@
     "gulp-cli": "^2.0.1",
     "gulp-html-minifier": "^0.1.8",
     "gulp-htmlmin": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
     "gulp-refresh": "^1.1.0",
     "gulp-run-command": "0.0.9"
   },
   "__enviroment": {
     "__default_language": "sr",
     "__beta_destination": "beta",
-    "__prod_destination": "prod"
+    "__prod_destination": "prod",
+    "__port": 8000
   }
 }
